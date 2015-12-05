@@ -30,7 +30,7 @@ var bootstrap = function (oauthConfig) {
 
   app.use(bodyParser());
 
-  app.all('/oauth/token', app.oauth.grant);
+  app.all('/oauth/token', app.oauth.grant());
 
   app.all('/private', function (req, res, next) {
     res.send('Hello');
